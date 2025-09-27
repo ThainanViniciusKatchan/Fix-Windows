@@ -6,4 +6,5 @@ Esse arquivo consiste em um código BatchScript para correção de erros do Wind
 No momento ele corrige somente erros de arquivos do sistema, erros de rede e erros relacionados ao Windows-Defender
 
   Menu de seleção para usuário
-  ![image](https://github.com/user-attachments/assets/0b3d1793-783d-4a65-8c38-dfe820bc47ec)
+<img width="716" height="423" alt="image" src="https://github.com/user-attachments/assets/8759df9e-0705-451f-80ef-683e4ef925ec" />
+
