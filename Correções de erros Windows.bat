@@ -41,7 +41,7 @@ echo %ESC%[34m[2]%ESC%[0m - Corrigir problemas de arquvios do Sistema
 echo %ESC%[34m[3]%ESC%[0m - Corrigir Problemas com Windows-Defender
 echo %ESC%[34m[4]%ESC%[0m - Remover Pesquisa Bing no menu iniciar
 echo %ESC%[34m[5]%ESC%[0m - Desativar função vincular celular
-echo %ESC%[34m[6]%ESC%[0m - Timpar arquivos temporários
+echo %ESC%[34m[6]%ESC%[0m - Limpar arquivos temporários
 echo %ESC%[34m[7]%ESC%[0m - Reparar Windows update
 echo %ESC%[34m[8]%ESC%[0m - Reparar Windows Store
 echo %ESC%[34m[9]%ESC%[0m - Reparar Conexão com impressora
@@ -189,7 +189,6 @@ echo %ESC%[32m"Vincular Celular desativado com sucesso! :) "%ESC%[0m
 pause
 cls
 goto menu
-
 
 :opcao6
 cls
@@ -412,6 +411,7 @@ echo %ESC%[34m[18]%ESC%[0m - Teste de latencia da rede
 echo %ESC%[34m[19]%ESC%[0m - Desativar OneDrive
 echo %ESC%[34m[20]%ESC%[0m - Desativar Copilot do Windows/Edge
 echo %ESC%[34m[21]%ESC%[0m - Ativar/Desativar HPET (High Precision Event Timer)
+echo %ESC%[34m[22]%ESC%[0m - Ativar Sistema/office
 echo %ESC%[32m[A] "<- Menu Anterior" -  %ESC%[0m
 
 set /p opcao="Digite uma opção: "
@@ -423,6 +423,7 @@ if %opcao% == 18 goto opcao18
 if %opcao% == 19 goto opcao19
 if %opcao% == 20 goto opcao20
 if %opcao% == 21 goto opcao21
+if %opcao% == 22 goto opcao22
 if %opcao% == A goto Menu
 if %opcao% == a goto Menu
 
@@ -566,3 +567,14 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Services\HPET" /v Start /t REG_DWORD /d 2
 echo %ESC%[32m "HPET Ativado com sucesso! :)" %ESC%[0m
 pause
 goto ReniciarPC
+
+:opcao22
+cls
+echo %ESC%[32m "Reparando Licença do Windows/Office" %ESC%[0m
+cls
+echo %ESC%[32m "Abrindo PowerShell, aguarde alguns minutos.." %ESC%[0m
+cls
+powershell -command "irm https://get.activated.win | iex"
+pause
+goto menu02
+

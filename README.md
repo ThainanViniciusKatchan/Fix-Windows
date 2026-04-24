@@ -4,7 +4,6 @@
 ## *Este é sem duvida o Script mais completo que tem para melhorias do Windows*
 
 ### Suas principais funções:
-
 - Solução de problemas e melhoria na rede
 -  Solução de problema com impressora
 -  Remoção de softwares desnecessários
